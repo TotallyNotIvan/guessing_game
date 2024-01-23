@@ -31,17 +31,21 @@ button:hover{
     color:#fffdfd;
     background-color:#744488;
 }
-.cell.clicked{
-    background-color: lightblue;
-}
-.cell.close {
+.cell.almost {
     background-color: lightgreen;
 }
 
-.cell.closer {
+.cell.close {
     background-color: yellow;
 }
 
-.cell.closest {
+.cell.miss {
     background-color: red;
+}
+
+.cell.hit {
+    background-color: rgb(43, 255, 0);
+}
+span{
+    font-size: 140px;
 }

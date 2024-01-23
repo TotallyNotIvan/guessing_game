@@ -18,25 +18,26 @@
       
           for (let i = 1; i <= 100; i++) {
               const button = document.createElement('button');
+              num = Math.floor(Math.random() * 100) + 1;
               button.classList.add('cell');
               button.textContent = i;
               button.addEventListener('click', () => {
                   // Handle button click event here if needed
-                  button.classList.toggle('clicked');
-                  const difference = Math.abs(i - currentNewNum);
+                  const difference = Math.abs(i - num);
 
                 // Remove all existing color classes
-                button.classList.remove('clicked', 'close', 'closer', 'closest');
+                button.classList.remove('close', 'closer', 'closest','hit');
 
                 // Add color class based on difference
-                if (difference < 10) {
+                if (difference == 0) {
+                    button.classList.add('hit');
+                } else if (difference < 10) {
+                    button.classList.add('almost');
+                }else if (difference < 20) {
                     button.classList.add('close');
-                } else if (difference < 20) {
-                    button.classList.add('closer');
                 } else {
-                    button.classList.add('closest');
+                    button.classList.add('miss');
                 }
-                button.classList.toggle('clicked');
 
               });
               gridContainer.appendChild(button);
