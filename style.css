@@ -1,0 +1,130 @@
+body {
+    background-color: #35654d;
+}
+.title{
+    font-size: 5vmax;
+}
+.header{
+    font-size: 2rem;
+    background-color: #4B3B47;
+    padding: 2vmax;
+}
+.header img{
+    max-height: 0vmax;
+}
+.header span{
+    padding: 0;
+}
+.heading{
+    font-size: 2rem;
+}
+/* @media screen and (max-width: 670px){
+    .title{
+        font-size: 10vmax;
+        max-width: 1rem;
+    }
+    .header{
+        font-size: 0vmax;
+    }
+    .header img{
+        max-height: 10vmax;
+        padding-left:35% ;
+        cursor: pointer;
+    }
+} */
+    
+.subtitle{
+    font-size: 5vmax;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.card{
+    font-size: 2.5rem;
+    border: .25rem solid #171616;
+    color:#050404;
+    border-radius: .5rem;
+    padding-left: .25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color:#D8D8D8;
+    width: 5rem;
+}
+/* .card img{
+    transform: translate(1rem);
+} */
+.suit{
+    height: 1.5rem;
+}
+.spacer{
+    font-size: 7vmax;
+}
+.button{
+    font-size: 3vmax;
+    border: .3rem solid #D8D8D8;
+    color:#040303;
+    border-radius: 1rem;
+    padding: .5rem; 
+    padding-left: .7rem;
+    padding-right: .7rem;
+    cursor: pointer;
+    background-color:#D8D8D8;
+}
+.button:hover{
+    border-color: #a91818;
+    color:#201e1e;
+    background-color:#a91818;
+}
+/* .whowon{
+    font-size: 5vmax;
+} */
+.controls{
+    grid-column: span 2;
+}
+#wl{
+    position: relative;
+}
+
+
+  a.nav-item {
+    position: relative; /*-- overcomes negative margin in above rule --*/
+    top: 4px; /*-- tweaks vertical position --*/
+    text-align: center; /*-- center-aligns all text inside their boxes --*/
+    padding: .75em 0; /*-- provides padding inside menu items --*/
+    margin: auto 0; /*-- centers menu text vertically --*/
+    color: var(--rev-text);
+    transition: color 250ms ease-in-out; /*-- specifies transition, duration, and easing --*/
+    cursor: pointer;
+  }
+.nav-item.trigram {
+    display: none; /*-- hides trigram (hamburger menu button) by default --*/
+    text-decoration: none; /*-- removes underline --*/
+    font-size: 2rem; /*-- makes much larger than normal text--*/
+  }
+  /*-- Mobile Nav Queries --*/
+  /*--At screens BELOW 768px, hides nav menu items and displays trigram --*/
+  @media screen and (max-width: 767px) {
+    .topnav a, .topnav span {display: none;}
+    .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: 0em; background:var(--prime);}
+  }
+  /*-- At screens BELOW 768px,  rules for mobile nav--*/
+  @media screen and (max-width: 767px) {
+    .topnav.responsive {align-items: center;} /*-- vertically centers--*/
+    .topnav.responsive a, .topnav.responsive span {display:inherit;} /*-- makes menu items visible --*/
+    .topnav.responsive a:first-child {margin-top:1em;} /*-- adds space above first item --*/
+    .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;} /*-- makes items visible (but not the trigram) and adds space above them--*/
+    .topnav.responsive a.more {margin-bottom: 1em;} /*-- adds margin below bottom item --*/
+    .topnav.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
+    .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+  }
+  /*-- At screens 768px and ABOVE, set normal menu defaults --*/
+  @media screen and (min-width: 768px) {
+    .topnav {display: flex; flex-direction: row; justify-content: space-between;}
+  }

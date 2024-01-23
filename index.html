@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="other/modnorm.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="JavaScript/main.js"></script>
+    </head>
+    <body>
+        <script>
+            let cash=1000
+            let bet=100
+        </script>
+        <header class="header">
+            <span class="label">Table 72</span>
+            <nav id="main-nav" class="topnav">
+                <a class="nav-item">
+                  <span class="label">Rules</span>
+                </a>
+                <a class="nav-item">
+                  <span class="label">About</span>
+                </a>
+                <a class="nav-item">
+                  <span class="label">Credits</span>
+                </a>
+                <a class="nav-item">
+                  <span class="label">More</span>
+                </a>
+                <a class="nav-item more">
+                  <span class="label">Support</span>
+                </a>
+                <a href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
+              </nav>
+            <!-- <span> Rules</span>
+            <span> About</span>
+            <span> Other</span>
+            <span> Support</span>
+            <img src="SVGs/menu.svg" alt="menu"></svg> -->
+        </header>
+        <span class="heading">$</span>
+        <span class="heading" id="cash">1000</span>
+        <span class="heading" id="wl"></span>
+        <div class="grid-container">
+            <div class="grid-item">
+                <p class="subtitle">Dealer:</p>
+                <span id="dealerValue">?</span>
+                <div class="grid-container2">
+                  <div class="card">
+                      <span id="dealer"></span>
+                      <img class="suit" id='dealersuit'src="SVGs/question.svg" alt="clubs">
+                      <!-- <span id="handoneColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="dealer2"></span>
+                    <img class="suit" id='dealersuit2'src="SVGs/question.svg" alt="clubs">
+                    <!-- <span id="handoneColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="dealer3"></span>
+                    <img class="suit" id='dealersuit3'src="SVGs/question.svg" alt="clubs">
+                    <!-- <span id="handoneColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="dealer4"></span>
+                    <img class="suit" id='dealersuit4'src="SVGs/question.svg" alt="clubs">
+                    <!-- <span id="handoneColor"></span> -->
+                </div>
+                <div class="card">
+                  <span id="dealer5"></span>
+                  <img class="suit" id='dealersuit5'src="SVGs/question.svg" alt="clubs">
+                  <!-- <span id="handoneColor"></span> -->
+                </div>
+                <div class="card">
+                  <span id="dealer6"></span>
+                  <img class="suit" id='dealersuit6'src="SVGs/question.svg" alt="clubs">
+                  <!-- <span id="handoneColor"></span> -->
+                </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <!-- <p class="subtitle">Player1:</p> -->
+                <p class="subtitle">You:</p>
+                <span id="handoneValue">?</span>
+                <div class="grid-container2">
+                  <div class="card">
+                      <span id="handone"></span>
+                      <img class="suit" id="handonesuit" src="SVGs/question.svg" alt="hearts">
+                      <!-- <span id="dealerColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="handone2"></span>
+                    <img class="suit" id="handonesuit2" src="SVGs/question.svg" alt="hearts">
+                    <!-- <span id="dealerColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="handone3"></span>
+                    <img class="suit" id="handonesuit3" src="SVGs/question.svg" alt="hearts">
+                    <!-- <span id="dealerColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="handone4"></span>
+                    <img class="suit" id="handonesuit4" src="SVGs/question.svg" alt="hearts">
+                    <!-- <span id="dealerColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="handone5"></span>
+                    <img class="suit" id="handonesuit5" src="SVGs/question.svg" alt="hearts">
+                    <!-- <span id="dealerColor"></span> -->
+                  </div>
+                  <div class="card">
+                    <span id="handone6"></span>
+                    <img class="suit" id="handonesuit6" src="SVGs/question.svg" alt="hearts">
+                    <!-- <span id="dealerColor"></span> -->
+                  </div>
+                  <!-- <div class="card">
+                    <span id="handone7">?</span>
+                    <img class="suit" id="handonesuit7" src="SVGs/question.svg" alt="hearts"> -->
+                    <!-- <span id="dealerColor"></span> -->
+                <!-- </div>
+                <div class="card">
+                  <span id="handone8">?</span>
+                  <img class="suit" id="handonesuit8" src="SVGs/question.svg" alt="hearts"> -->
+                  <!-- <span id="dealerColor"></span> -->
+                <!-- </div>
+                <div class="card">
+                  <span id="handone9">?</span>
+                  <img class="suit" id="handonesuit9" src="SVGs/question.svg" alt="hearts"> -->
+                  <!-- <span id="dealerColor"></span> -->
+                <!-- </div> -->
+                  
+                </div>
+                <!-- <div class="card">
+                  <span id="handone4">?</span>
+                  <img class="suit" id="handonesuit4" src="SVGs/question.svg" alt="hearts"> -->
+                  <!-- <span id="dealerColor"></span> -->
+                <!-- </div> -->
+                <!-- <div class="card">
+                  <span id="handone5">?</span>
+                  <img class="suit" id="handonesuit5" src="SVGs/question.svg" alt="hearts"> -->
+                  <!-- <span id="dealerColor"></span> -->
+                <!-- </div> -->
+            </div>
+            <div class="controls">
+                <p class="spacer"></p>
+                <button class=button onclick="betDown()">&#8681</button>
+                <span class=button>
+                <span>$</span>
+                <span id="bet">100</span>
+                </span>
+                <button class=button onclick="betUp()">&#8679</button>
+                <button class=button onclick="deal()">Deal</button>
+                <!-- <span class="button">Deal</span> -->
+                <button class="button" onclick="hit()">Hit</button>
+                <!-- <span id="printn">a</span> -->
+                <button class="button" onclick="win()">Stand</button>
+                <!-- <span class="button">Double</span>
+                <span class="button">Split</span> -->
+            </div>
+        </div>
+    </body>
+</html>
